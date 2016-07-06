@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//Control Ryu
 	$('.ryu').mouseenter(function(){
 		$('.ryu-still').hide();
 		$('.ryu-ready').show();
@@ -20,15 +21,38 @@ $(document).ready(function(){
 		$('.ryu-ready').show();
 	});
 
+	//Control Hulk Ryu
+
+	$('.hulk-ryu').mouseenter(function(){
+		$('.hulk-ryu-still').hide();
+		$('.hulk-ryu-ready').show();
+	}).mouseleave(function(){
+		$('.hulk-ryu-ready').hide();
+		$('.hulk-ryu-still').show();
+	}).mousedown(function(){
+		playHadouken();
+		$('.hulk-ryu-ready').hide();
+		$('.hulk-ryu-throwing').show();
+		$('.hulk-hadouken').finish().show().animate({'left': '300px'}, 
+			500,
+			function(){
+				$(this).hide();
+				$(this).css('left', '800px');
+			});
+	}).mouseup(function(){
+		$('.hulk-ryu-throwing').hide();
+		$('.hulk-ryu-ready').show();
+	});
+
 	$(document).keydown(function(e){
 		if(e.which == 88){
-			$('.ryu-still').hide();
-			$('.ryu-ready').hide();
-			$('.ryu-cool').show();
+			$('.ryu-still, .hulk-ryu-still').hide();
+			$('.ryu-ready, .hulk-ryu-ready').hide();
+			$('.ryu-cool, .hulk-ryu-cool').show();
 		}
 	}).keyup(function(){
-		$('.ryu-cool').hide();
-		$('.ryu-still').show();
+		$('.ryu-cool, .hulk-ryu-cool').hide();
+		$('.ryu-still, .hulk-ryu-still').show();
 	});
 });
 

@@ -19,6 +19,17 @@ $(document).ready(function(){
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 	});
+
+	$(document).keydown(function(e){
+		if(e.which == 88){
+			$('.ryu-still').hide();
+			$('.ryu-ready').hide();
+			$('.ryu-cool').show();
+		}
+	}).keyup(function(){
+		$('.ryu-cool').hide();
+		$('.ryu-still').show();
+	});
 });
 
 //sound function

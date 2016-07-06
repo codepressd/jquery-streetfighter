@@ -58,6 +58,23 @@ body{
 	z-index: 10;
 
 }
+
+
+/*Hulk Ryu*/
+
+.hulk-ryu{
+	-webkit-filter: hue-rotate(90deg);
+	filter: hue-rotate(90deg);
+}
+
+.switch{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+
+}
 .hulk-hadouken{
 	background-image: url('../images/hadouken.gif');
 	width: 156px;
@@ -68,16 +85,5 @@ body{
 	top: 170px;
 	left: 800px;
 	z-index: 10;
-
-}
-
-/*Hulk Ryu*/
-
-
-.switch{
-	    -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
 
 }
